@@ -5,12 +5,7 @@ from sys import exit as sys_exit
  
  
 def main():
-    line_re = re_comp(r'^(dev|prod|uat|qa)-(aco|asroma2|augusta|cbcom|championsleague|' +\
-                      r'chl|concacaf|copa90|demo|echl|ffhb|fisc|fwkc|goldcup|infront|ixco|' +\
-                      r'legendssvo-bb|legendssvo|legendsoue|legendscsl-bb|legendscsl|' +\
-                      r'legendsconsl|legends-bb|legends|level99|lnrugby|nationsleague|ogcom|' +\
-                      r'owo|releventsicc|relevents|sample|sinclair|socialaggregator|' +\
-                      r'supersevensrugby|velon2|velonhs|xfl).* - (\d+)$', I)
+    line_re = re_comp(r'^(dev|prod|uat|qa)-(projects1/projects2/projects3).* - (\d+)$', I)
     data: Dict = dict()
     try:
         with open('report.txt') as report:
